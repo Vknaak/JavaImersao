@@ -1,0 +1,15 @@
+package br.com.tt;
+
+public class Cliente {
+	
+	private String nome;
+	private String cpf;
+	
+	String escreverNome(String parametroNome){
+		nome = parametroNome;
+		return nome;
+		
+	}
+	
+	
+}

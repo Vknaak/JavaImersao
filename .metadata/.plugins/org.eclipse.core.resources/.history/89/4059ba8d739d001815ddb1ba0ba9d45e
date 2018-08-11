@@ -1,0 +1,13 @@
+package br.com.tt;
+
+public class Principal {
+	public static void main(String[] args) {
+		System.out.println("Iniciando o Sistema.....");
+		
+		Cliente cliente = new Cliente();//alt + shit + L implementa a criancao de novo objeto
+		//cliente.nome = "a";
+		
+		cliente.escreverNome("a");
+		
+	}
+}

@@ -1,0 +1,16 @@
+package br.com.tt.app;
+
+import br.com.tt.app.model.Cliente;
+import lombok.Data;
+
+@Data
+public class Principal {
+
+	public static void main(String[] args) {
+		System.out.println("Iniciando o Sistema...");
+		
+		Cliente cliente = new Cliente();
+		cliente.setNome("Maria");
+	}
+
+}

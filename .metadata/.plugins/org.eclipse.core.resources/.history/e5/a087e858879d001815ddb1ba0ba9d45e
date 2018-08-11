@@ -1,0 +1,10 @@
+package br.com.tt.app;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		System.out.println("Iniciando o Sistema....");
+
+	}
+
+}

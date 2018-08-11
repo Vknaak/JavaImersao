@@ -1,0 +1,21 @@
+package br.com.tt.app;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		System.out.println("Iniciando o Sistema....");
+		List<Cliente> clientes = new ArrayList<>();
+		
+		clientes.add(new Cliente("Maria","75973227049"));
+		clientes.add(new Cliente("Paulo","7597652452"));
+		clientes.add(new Cliente("Joao","7554788441"));
+		
+		
+		clientes.forEach(System.out::println);
+
+	}
+
+}

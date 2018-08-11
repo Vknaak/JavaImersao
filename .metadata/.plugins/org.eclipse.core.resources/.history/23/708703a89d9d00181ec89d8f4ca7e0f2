@@ -1,0 +1,13 @@
+package br.com.tt.app;
+
+import java.util.List;
+
+public class Cliente {
+	
+	private Long id;
+	private String nome;
+	private String cpf;
+	private List<Telefones> telefones;
+	private Endereco endereco;
+
+}

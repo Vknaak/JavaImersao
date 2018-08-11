@@ -1,0 +1,13 @@
+package br.com.tt.app;
+
+import br.com.tt.app.model.Cliente;
+
+public class Principal {
+	public static void main(String[] args) {
+		
+		System.out.println("Iniciando o Sistema.");
+
+		new Cliente();
+
+	}
+}

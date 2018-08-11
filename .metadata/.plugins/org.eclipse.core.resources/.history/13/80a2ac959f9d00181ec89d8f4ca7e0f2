@@ -1,0 +1,7 @@
+package br.com.tt.app.type;
+
+public enum TelefoneType {
+	
+	CELULAR("Celular"),RESIDENCIAL("Residencail"),COMERCIAL("Comercial"),FAX("Fax");
+
+}

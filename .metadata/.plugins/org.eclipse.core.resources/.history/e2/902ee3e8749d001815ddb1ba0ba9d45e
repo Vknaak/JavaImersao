@@ -1,0 +1,27 @@
+package br.com.tt;
+
+public class Cliente {
+	
+	private String nome;
+	private String cpf;
+	
+	String escreverNome(String parametroNome){
+		
+		if(parametroNome.length() < 3) {
+			return "Nome necessita ser completo";
+		}		
+		nome = parametroNome;
+		return nome;
+		
+		
+		
+	}
+
+	public String pegarNome() {
+		return nome;
+		
+		
+	}
+	
+	
+}

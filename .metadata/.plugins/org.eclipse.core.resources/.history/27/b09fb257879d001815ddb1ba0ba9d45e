@@ -1,0 +1,12 @@
+package br.com.tt.app;
+
+import java.time.LocalDate;
+
+public class Cliente {
+	
+	private String nome;
+	private String cpf;
+	private LocalDate dataNasc;
+	private Endereco endereco;
+
+}
