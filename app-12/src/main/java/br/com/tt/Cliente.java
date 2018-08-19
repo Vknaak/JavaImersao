@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package br.com.tt;
 
 import java.util.Comparator;
@@ -128,3 +129,14 @@ public class Cliente implements Predicate<Cliente>, Comparable<Cliente>, Compara
 	
 
 }
+=======
+package br.com.tt;
+
+public class Cliente {
+
+	public Cliente() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
+>>>>>>> bcdf0a8df3c24286f7e9e678ab3165c6b41764d3
