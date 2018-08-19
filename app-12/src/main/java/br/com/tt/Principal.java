@@ -34,7 +34,18 @@ public class Principal {
 
 		Produto p = produtoDao.buscar(produto);
 		System.out.println("\n\nResulto do busca: " + p);
-
+		
+		ClienteDao clienteDao = new ClienteDao();
+		Cliente cliente = new Cliente();
+		cliente.setNome(faker.name().firstName());
+		cliente.setCpf("759.732.270-49");
+		clienteDao.salvar(cliente);
+		
+		Cliente cliente1 = new Cliente();
+		cliente1.setNome(faker.name().firstName());
+		cliente1.setCpf("759.756.123-98");
+		clienteDao.salvar(cliente1);
+		System.out.println("Cliente Inserido:\n "+ cliente +"\n"+ cliente1);
 	}
 
 }
