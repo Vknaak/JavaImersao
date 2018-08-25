@@ -1,0 +1,27 @@
+2018-08-25 10:34:10.808 DEBUG [main] LogTeste:13 - Debug da função.
+2018-08-25 10:34:10.824 INFO  [main] LogTeste:14 - Info da função.
+2018-08-25 10:34:10.824 ERROR [main] LogTeste:15 - Error da função.
+2018-08-25 10:34:10.824 FATAL [main] LogTeste:16 - Fatal da função.
+2018-08-25 10:34:10.831 WARN  [main] LogTeste:17 - Warning da função.
+2018-08-25 11:43:11.440 ERROR [main] Arquivo:29 - java.lang.NullPointerException
+	at java.nio.file.Files.provider(Files.java:97)
+	at java.nio.file.Files.newOutputStream(Files.java:216)
+	at java.nio.file.Files.newBufferedWriter(Files.java:2860)
+	at java.nio.file.Files.newBufferedWriter(Files.java:2896)
+	at br.com.tt.Arquivo.main(Arquivo.java:21)
+
+2018-08-25 11:43:54.404 ERROR [main] Arquivo:29 - java.lang.NullPointerException
+	at java.nio.file.Files.provider(Files.java:97)
+	at java.nio.file.Files.newOutputStream(Files.java:216)
+	at java.nio.file.Files.newBufferedWriter(Files.java:2860)
+	at java.nio.file.Files.newBufferedWriter(Files.java:2896)
+	at br.com.tt.Arquivo.main(Arquivo.java:21)
+
+
+2018-08-25 11:58:35.604 ERROR [main] Arquivo:39 - Falha no Sistema, cod: 94fcd66b-2073-4c1f-b67d-b21e8455ea97 java.lang.NullPointerException
+	at java.nio.file.Files.provider(Files.java:97)
+	at java.nio.file.Files.newOutputStream(Files.java:216)
+	at java.nio.file.Files.newBufferedWriter(Files.java:2860)
+	at java.nio.file.Files.newBufferedWriter(Files.java:2896)
+	at br.com.tt.Arquivo.main(Arquivo.java:24)
+
