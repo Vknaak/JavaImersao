@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Cadastro Teste</title>
+	<style>
+	body {background-color: powderblue;}
+	table {text-align: left}
+	th {color: red;
+    font-family: courier;
+    font-size: 100%;}
+	legend {color: blue;
+    font-family: courier;
+    font-size: 160%;}
+	fieldset{border: 2px solid black;}
+	input[type=submit]{    background-color: #CCAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+} 
+	</style>
+</head>		
+	<body>
+		
+			<form >
+			<fieldset>
+			<legend>Cadastro</legend>
+			<table>
+			<tr><th>Nome: </th><th><input type="text" name="nome" ></th></tr>
+			<tr><th>Sobrenome:</th><th><input type="text" name="sobrenome"></th></tr>
+			<tr><th>E-mail:</th><th><input type="mail" name="email"></th></tr>
+			<tr><th>Senha:</th><th><input type="password" name="senha"></th></tr>
+			<tr><th>Sexo</tr></th>
+			<tr><th><input type="radio" name="genero" value="Masculino" checked>Masculino</tr></th>
+			<tr><th><input type="radio" name="genero" value="Feminino">Feminino</tr></th>
+			<tr><th><input type="submit" name="enviar" value="Enviar"></tr></th>
+			</table>
+			</fieldset>
+			</form>
+		
+		
+	</body>
+	</html>

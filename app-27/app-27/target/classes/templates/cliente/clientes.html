@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+<meta charset="UTF-8">
+<title>Clientes</title>
+</head>
+<body>
+	<center>
+		<h2 class="h2">Lista de Clientes!!!</h2>
+	</center>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarNav" aria-controls="navbarNav"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active"><a class="nav-link"
+					href="/cliente/cadastro">Cadastro Clientes<span class="sr-only">(current)</span></a></li>
+				<li class="nav-item"><a class="nav-link" href="/">Voltar</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>ID:</th>
+				<th>Nome:</th>
+				<th>CNPJ:</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="cliente : ${cliente}">
+				<td th:text="${cliente.id}"></td>
+				<td th:text="${cliente.nome}"></td>
+				<td th:text="${cliente.cnpj}"></td>
+				<td><a class="delete btn btn-primary"
+					th:href="@{/cliente/{id}(id=${cliente.id})}">Exibir</a> <a
+					class="editar btn btn-warning"
+					th:href="@{/cliente/{id}/editar(id=${cliente.id})}">Editar</a> <a
+					class="delete btn btn-danger"
+					th:href="@{/cliente/{id}/excluir(id=${cliente.id})}">Excluir</a></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
