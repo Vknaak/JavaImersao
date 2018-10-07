@@ -10,36 +10,51 @@
 <title>Fornecedores</title>
 </head>
 <body>
-	<center>
-		<h2 class="h2">Lista de Fornecedores</h2>
-	</center>
-	<hr>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<div class="p-3 mb-2 bg-secondary">
+		<div class="container">
+			<h2
+				STYLE="color: green; line-height: 50px; font-size: 40px; font-family: Lucida handwriting, Times, serif;">Listagem
+				de Fornecedores</h2>
+		</div>
+	</div>
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarNav" aria-controls="navbarNav"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-				<li class="nav-item active"><a class="nav-link" href="/fornecedor/cadastro">Cadastro de Fornecedores<span
-						class="sr-only">(current)</span></a></li>
-				<li class="nav-item"><a class="nav-link" href="/">Voltar</a>
+	<nav class="navbar navbar-expand-lg bg-dark bg-light">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarNav" aria-controls="navbarNav"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<ul class="nav navbar-nav">
+				<li class="nav-item active"><a
+					class="btn btn-outline-success mr-sm-2" href="/fornecedor/cadastro">Cadastro
+						de Fornecedores<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item"><a class="btn btn-outline-success mr-sm-2"
+					href="/">Voltar</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><
+					<form th:action=@{/fornecedor/pesquisar} method="post">
+						<input class="btn btn-outline-alert mr-sm-2" type="text"
+							name="pesquisa" placeholder="Buscar fornecedor"> <input
+							class="btn btn-outline-warning mr-sm-2" type="submit"
+							value="Pesquisar">
+
+					</form>
 				</li>
 
 			</ul>
 		</div>
 	</nav>
-	
-	<hr />
+
 	<table class="table table-striped">
 		<thead>
 			<tr>
 				<th>ID:</th>
 				<th>Nome:</th>
 				<th>CNPJ:</th>
-				
+
 			</tr>
 		</thead>
 		<tbody>
@@ -47,11 +62,12 @@
 				<td th:text="${fornecedor.id}"></td>
 				<td th:text="${fornecedor.nome}"></td>
 				<td th:text="${fornecedor.cnpj}"></td>
-				<td><a class="delete btn btn-primary" th:href="@{/fornecedor/{id}(id=${fornecedor.id})}">Exibir</a>
-				<a class="editar btn btn-warning"
-				th:href="@{/fornecedor/{id}/editar(id=${fornecedor.id})}">Editar</a>
-				<a class="delete btn btn-danger"
-				th:href="@{/fornecedor/{id}/excluir(id=${fornecedor.id})}">Excluir</a></td>
+				<td><a class="delete btn btn-primary"
+					th:href="@{/fornecedor/{id}(id=${fornecedor.id})}">Exibir</a> <a
+					class="editar btn btn-warning"
+					th:href="@{/fornecedor/{id}/editar(id=${fornecedor.id})}">Editar</a>
+					<a class="delete btn btn-danger"
+					th:href="@{/fornecedor/{id}/excluir(id=${fornecedor.id})}">Excluir</a></td>
 			</tr>
 		</tbody>
 	</table>
