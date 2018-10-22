@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+<meta charset="UTF-8">
+<title>Mercados</title>
+</head>
+<body>
+	<div class="p-3 mb-2 bg-secondary">
+		<div class="container">
+			<h2
+				STYLE="color: green; line-height: 50px; font-size: 40px; font-family: Lucida handwriting, Times, serif;">Listagem
+				de Mercados</h2>
+		</div>
+	</div>
+	<nav class="navbar navbar-expand-lg bg-dark bg-light">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarNav" aria-controls="navbarNav"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<ul class="nav navbar-nav">
+				<li class="nav-item active"><a
+					class="btn btn-outline-success mr-sm-2" href="/mercado/cadastro">Cadastro
+						de Mercados<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item active"><a
+					class="btn btn-outline-success mr-sm-2" href="/produto">Produtos<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item active"><a
+					class="btn btn-outline-success mr-sm-2" href="/cliente">Clientes<span class="sr-only">(current)</span>
+				</a></li>
+				
+				<li class="nav-item"><a class="btn btn-outline-success mr-sm-2"
+					href="/">Voltar</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><
+					<form th:action=@{/mercado/pesquisar} method="post">
+						<input class="btn btn-outline-alert mr-sm-2" type="text"
+							name="pesquisa" placeholder="Buscar mercados"> <input
+							class="btn btn-outline-warning mr-sm-2" type="submit"
+							value="Pesquisar">
+
+					</form>
+				</li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>ID:</th>
+				<th>Razão Social:</th>
+				<th>CNPJ:</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="mercado : ${mercados}">
+				<td th:text="${mercado.id}"></td>
+				<td th:text="${mercado.razao}"></td>
+				<td th:text="${mercado.cnpj}"></td>
+				<td><a class="delete btn btn-primary"
+					th:href="@{/mercado/{id}(id=${mercado.id})}">Exibir</a> <a
+					class="editar btn btn-warning"
+					th:href="@{/mercado/{id}/editar(id=${mercado.id})}">Editar</a>
+					<a class="delete btn btn-danger"
+					th:href="@{/mercador/{id}/excluir(id=${mercado.id})}">Excluir</a></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
